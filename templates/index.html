@@ -1,0 +1,127 @@
+{% extends "base.html" %} {% block title %} Index {% endblock %} {% block main
+%}
+<script>
+  const clmT = "{{ dataR }}";
+</script>
+<input
+  class="search-bar no-outline"
+  type="text"
+  id="mySearch"
+  onkeyup="searchFunc()"
+  placeholder="search"
+  title="Type in a category"
+  autocomplete="off"
+/>
+<div class="div-logout">
+  <a class="nav-link" href="/logout">SIGN OUT</a>
+</div>
+<div class="add-entry-div"><button id="add-entry">ADD NEW ENTRY</button></div>
+<div class="form-entry">
+  <form class="is-hidden" id="formElem" action="/" method="post">
+    <input
+      class="no-outline"
+      id="name"
+      autocomplete="off"
+      type="text"
+      name="Website Name"
+      placeholder="Website Name"
+      required
+    />
+    <input
+      class="no-outline"
+      id="link"
+      autocomplete="off"
+      type="text"
+      name="link"
+      placeholder="Link"
+    />
+    <input
+      class="no-outline"
+      id="username"
+      autocomplete="off"
+      type="text"
+      name="username"
+      placeholder="Username"
+      required
+    />
+    <input
+      class="no-outline in-edit"
+      id="password"
+      autocomplete="off"
+      type="text"
+      required
+      name="password"
+      placeholder="Password"
+    />
+    <div class="err-msg" id="passError"></div>
+    <input id="submit" type="submit" value="SAVE" />
+  </form>
+</div>
+
+<button id="generator" class="is-hidden">GENERATE NEW PASSWORD</button>
+{% if dataFromFlask %}
+
+<div class="entry-div">
+  <h1>My List</h1>
+  <table id="list-entries">
+    <thead>
+      <tr>
+        <th>Website Name</th>
+        <th>Link</th>
+        <th>Username</th>
+        <th>Password</th>
+        <th class="is-hidden">Action</th>
+        {% endif %}
+      </tr>
+    </thead>
+    <tbody>
+      {% for i in dataFromFlask %}
+      <tr>
+        <td class="name-search" data-entry-id="{{ i['id'] }}">
+          {{ i['name'] }}
+        </td>
+        <td class="link-search">
+          <a class="link-search" target="_blank" href="{{ i['link'] }}"
+            >{{ i['link'] }}</a
+          >
+        </td>
+        <td class="username-td"><p>{{ i['username'] }}</p></td>
+        <td class="password-td">
+          <button class="reveal-button" onclick="htmlActivate(this)">
+            REVEAL PASSWORD
+            <p class="is-hidden">{{ i['hash'] }}</p>
+          </button>
+        </td>
+        <td class="buttons-e-d">
+          <button class="edit-button" onclick="editOnClick(this)">EDIT</button
+          ><button class="delete-button" onclick="deleteOnClick(this)">
+            DELETE
+          </button>
+
+          <button class="cancel-button is-hidden" onclick="cancelOnClick(this)">
+            CANCEL
+          </button>
+          <button
+            onclick="generatePassword2(this)"
+            id="generator2"
+            class="generate-button is-hidden"
+          >
+            GENERATE NEW PASSWORD
+          </button>
+          <button class="save-button is-hidden" onclick="saveOnlclick(this)">
+            SAVE
+          </button>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<script src="{{ url_for('static', filename='js/crypt.js') }}"></script>
+<script src="{{ url_for('static', filename='js/passgen.js') }}"></script>
+<script src="{{ url_for('static', filename='js/buttonsFuncs.js') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+<script src="{{ url_for('static', filename='js/popup.js') }}"></script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+{% endblock %}

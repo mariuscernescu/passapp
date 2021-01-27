@@ -1,0 +1,46 @@
+{% extends 'base.html' %} {% block title %} Registration form {% endblock title
+%} {% block main %}
+<div class="login">
+  <form action="/register" method="post">
+    <h1 class="login__header">Welcome!</h1>
+
+    <input
+      id="user-reg"
+      class="login__input"
+      autocomplete="off"
+      type="text"
+      name="username"
+      placeholder="Username"
+      required
+    />
+
+    <div class="error-div" id="user-error"></div>
+
+    <input
+      id="pass-input"
+      class="login__input"
+      autocomplete="off"
+      type="password"
+      required
+      name="password"
+      placeholder="Password"
+    />
+
+    <div class="error-div" id="pass-error"></div>
+
+    <input
+      id="pass-repeat"
+      class="login__input"
+      autocomplete="off"
+      type="password"
+      required
+      name="confirmation"
+      placeholder="Repeat Password"
+    />
+
+    <div class="error-div" id="pass-verify"></div>
+    <input id="submit-reg" class="btn" type="submit" value="SIGN UP" />
+  </form>
+</div>
+<script src="{{ url_for('static', filename='js/registChecks.js') }}"></script>
+{% endblock %}
