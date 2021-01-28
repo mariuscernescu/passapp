@@ -7,5 +7,16 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
-  background-color: pink; }
+  font-size: 62.5%; }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
+  align-items: center; }
+  .header__buttons {
+    padding: 3.5rem; }
+  .header__h1 {
+    padding: 3.5rem;
+    color: #23575a;
+    font-weight: 800; }
