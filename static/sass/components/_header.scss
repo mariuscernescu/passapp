@@ -1,0 +1,16 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+    align-items: center;
+
+    &__buttons {
+        padding: 3.5rem;
+    }
+
+    &__h1 {
+        padding: 3.5rem;
+        color: $color-primary;
+        font-weight: 800;
+    }
+}
