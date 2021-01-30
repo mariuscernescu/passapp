@@ -1,0 +1,34 @@
+.login {
+  height: 70vh;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+
+  &__header {
+    font-weight: 500;
+    font-size: 5rem;
+    color: #23575a;
+    margin-bottom: 6rem;
+  }
+
+  &__input {
+    width: 52rem;
+    height: 7.2rem;
+    border: 1px hidden;
+    border-radius: 8px;
+    border-color: #e0e0e0;
+    background-color: #e0e0e0;
+    margin: 0.8rem;
+    font-size: 3.2rem;
+    color: #4c4c4c;
+    padding-left: 2rem;
+    outline: none;
+    margin-bottom: 2rem;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
