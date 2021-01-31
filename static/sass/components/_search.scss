@@ -1,0 +1,32 @@
+.search {
+  display: flex;
+ 
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+  margin: 4rem 2rem;
+
+  &__bar {
+    width: 78%;
+    height: 5.2rem;
+    border: 3px solid#4c4c4c;
+    border-radius: 8px;
+    margin: 0.8rem 0 0.8rem 0.8rem;
+    font-size: 3.2rem;
+    color: #4c4c4c;
+    padding-left: 2rem;
+    outline: none;
+    transition: all .2s;
+
+    &:focus {
+        outline: none;
+        transform: scale(1.03);
+        background-color: #e0e0e015;
+      }
+  }
+
+  &__btn {
+
+    margin: 4rem 3rem;
+  }
+}

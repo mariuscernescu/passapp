@@ -3,23 +3,30 @@
 <script>
   const clmT = "{{ dataR }}";
 </script>
-<input
-  class="search-bar no-outline"
-  type="text"
-  id="mySearch"
-  onkeyup="searchFunc()"
-  placeholder="search"
-  title="Type in a category"
-  autocomplete="off"
-/>
-<div class="div-logout">
-  <a class="nav-link" href="/logout">SIGN OUT</a>
+
+<div class="logout">
+  <a class="btn btn--white" href="/logout">SIGN OUT</a>
 </div>
-<div class="add-entry-div"><button id="add-entry">ADD NEW ENTRY</button></div>
-<div class="form-entry">
-  <form class="is-hidden" id="formElem" action="/" method="post">
+
+<div class="search">
+  <div class="search__btn">
+    <button id="add-entry" class="btn btn--sqare">ADD NEW ENTRY</button>
+  </div>
+
+  <input
+    class="search__bar"
+    type="text"
+    id="mySearch"
+    onkeyup="searchFunc()"
+    placeholder="search"
+    autocomplete="off"
+  />
+</div>
+
+<form class="entry is-hidden" id="formElem" action="/" method="post">
+  <div class="entry__forms">
     <input
-      class="no-outline"
+      class="entry__input"
       id="name"
       autocomplete="off"
       type="text"
@@ -28,7 +35,7 @@
       required
     />
     <input
-      class="no-outline"
+      class="entry__input"
       id="link"
       autocomplete="off"
       type="text"
@@ -36,7 +43,7 @@
       placeholder="Link"
     />
     <input
-      class="no-outline"
+      class="entry__input"
       id="username"
       autocomplete="off"
       type="text"
@@ -45,7 +52,7 @@
       required
     />
     <input
-      class="no-outline in-edit"
+      class="entry__input in-edit"
       id="password"
       autocomplete="off"
       type="text"
@@ -53,12 +60,16 @@
       name="password"
       placeholder="Password"
     />
-    <div class="err-msg" id="passError"></div>
-    <input id="submit" type="submit" value="SAVE" />
-  </form>
-</div>
+    <div class="entry__error" id="passError"></div>
+  </div>
 
-<button id="generator" class="is-hidden">GENERATE NEW PASSWORD</button>
+  <div class="entry__buttons">
+    <a id="generator" class="entry__generate is-hidden">GENERATE NEW PASSWORD</a>
+    <input class="entry__submit" id="submit" type="submit" value="SAVE" />
+  </div>
+</form>
+
+
 {% if dataFromFlask %}
 
 <div class="entry-div">

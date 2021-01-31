@@ -1,5 +1,7 @@
 @import "base/base";
 
+@import "abstracts/hidden";
+
 @import "pages/home";
 
 
@@ -9,3 +11,6 @@
 @import "components/btn";
 @import "components/login";
 @import "components/footer";
+@import "components/search";
+@import "components/logout";
+@import "components/entry";
