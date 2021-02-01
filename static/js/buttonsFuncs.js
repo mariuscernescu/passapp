@@ -28,7 +28,7 @@ function trToInput(elm) {
   let theInput = document.createElement("input");
 
   theInput.classList.add("artificial-input");
-  theInput.classList.add("no-outline");
+  theInput.classList.add("entry__input");
   if (elm.querySelector(".password2")) {
     theInput.classList.add("in-edit");
   }
