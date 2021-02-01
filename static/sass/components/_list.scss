@@ -1,0 +1,28 @@
+.list {
+  width: 95vw;
+  font-size: 2rem;
+  &__table {
+    width: 1000px;
+    font-size: 2rem;
+  }
+
+  &__head {
+    tr {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+  }
+
+  &__body {
+    tr {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: center;
+      th {
+      }
+    }
+  }
+}

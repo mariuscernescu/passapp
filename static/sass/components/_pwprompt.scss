@@ -1,0 +1,39 @@
+.pw_prompt {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -100px;
+    padding: 2rem;
+    width: 30rem;
+    background-color: #4c4c4c;
+    color: white;
+    font-weight: 400;
+    font-size: 1.7rem;
+    text-align: center;
+  }
+  
+  .pw_prompt label {
+    display: block;
+    margin-bottom: 2.5rem;
+    margin-top: 1rem;
+  }
+  .pw_prompt input {
+    margin-bottom: 1rem;
+    border-radius: .5rem;
+    border-style: hidden;
+    height: 2.5rem;
+    width: 26rem;
+  }
+  .pw_prompt button {
+    position: relative;
+    margin-bottom: 1rem;
+    border-style: hidden;
+    border-radius: 5px;
+    padding: 0.3rem 0.5rem;
+    color: #4c4c4c;
+    font-weight: 600;
+    font-size: 13px;
+    background-color: white;
+    cursor: pointer;
+    margin-top: 1.5rem;
+  }

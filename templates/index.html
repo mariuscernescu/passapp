@@ -72,10 +72,10 @@
 
 {% if dataFromFlask %}
 
-<div class="entry-div">
+<div class="list">
   <h1>My List</h1>
-  <table id="list-entries">
-    <thead>
+  <table id="list__table">
+    <thead class="list__head">
       <tr>
         <th>Website Name</th>
         <th>Link</th>
@@ -85,7 +85,7 @@
         {% endif %}
       </tr>
     </thead>
-    <tbody>
+    <tbody class="list__body">
       {% for i in dataFromFlask %}
       <tr>
         <td class="name-search" data-entry-id="{{ i['id'] }}">
