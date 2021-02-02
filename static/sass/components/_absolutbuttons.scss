@@ -1,0 +1,53 @@
+.row-in-edit {
+  position: relative;
+
+  .buttons-e-d {
+    position: absolute;
+    width: 60rem;
+
+    top: 45%;
+    left: 30%;
+
+    display: flex;
+    justify-items: center;
+    align-items: center;
+  }
+}
+
+.buttons-e-d {
+  margin-top: 3.2rem;
+  .cancel-button {
+    position: relative;
+  }
+
+  .generate-button {
+    position: relative;
+  }
+
+  .save-button {
+    position: relative;
+
+    &,
+    &:link,
+    &:visited {
+      text-transform: uppercase;
+      text-decoration: none;
+      display: inline-block;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    border: solid 3px #23575a;
+    color: white;
+    padding: 0.7rem 1.2rem;
+    background-color: #23575a;
+    font-size: 1.6rem;
+    border-radius: 0.5rem;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0.5rem 1rem rgba(#000, 0.2);
+    }
+  }
+}

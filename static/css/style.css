@@ -8,7 +8,8 @@
 html {
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  color: #4c4c4c; }
 
 .is-hidden {
   clip: rect(0 0 0 0);
@@ -58,7 +59,7 @@ html {
   font-weight: 500;
   margin-right: 1rem;
   cursor: pointer;
-  transition: all .2s; }
+  transition: all 0.2s; }
 
 .btn--white {
   border: solid 3px #4c4c4c;
@@ -113,9 +114,49 @@ html {
   padding: 1.2rem 0;
   background-color: #23575a;
   font-size: 1.8rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   width: 21rem; }
   .btn--sqare:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+.btn--reveal {
+  border: solid 3px #23575a;
+  color: white;
+  padding: .5rem;
+  background-color: #23575a;
+  font-size: 1.6rem;
+  border-radius: 0.5rem;
+  width: 18rem; }
+  .btn--reveal:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+.btn--edit {
+  padding: 0.5rem 1.8rem;
+  font-weight: 400;
+  font-size: 1.6rem;
+  border: solid 3px #4c4c4c;
+  border-radius: 0.5rem;
+  background-color: #4c4c4c;
+  color: white;
+  cursor: pointer;
+  margin-right: 2rem; }
+  .btn--edit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+.btn--delete {
+  padding: 0.5rem 1.8rem;
+  font-weight: 400;
+  font-size: 1.6rem;
+  border: solid 3px #c64d2e;
+  border-radius: 0.5rem;
+  background-color: #c64d2e;
+  color: white;
+  cursor: pointer;
+  margin-right: 2rem; }
+  .btn--delete:hover {
     transform: translateY(-3px);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
@@ -209,7 +250,7 @@ html {
   padding-left: 2rem;
   outline: none;
   transition: all 0.2s;
-  margin: 2rem 0; }
+  margin: 2rem 1.5rem 15rem 1.5rem; }
   .entry__input:focus {
     outline: none;
     transform: scale(1.03); }
@@ -250,7 +291,7 @@ html {
   .entry__generate:hover {
     transform: translateY(-3px);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
-  .entry__generate:active, .entry__generate:focus {
+  .entry__generate:active {
     outline: none;
     transform: translateY(-1px);
     box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.2); }
@@ -295,17 +336,62 @@ html {
 
 .list {
   width: 95vw;
-  font-size: 2rem; }
-  .list__table {
-    width: 1000px;
-    font-size: 2rem; }
+  font-size: 2rem;
+  margin: 5rem; }
+  .list h1 {
+    margin: 0 0 2rem 4rem; }
+  .list table {
+    width: 96%; }
   .list__head tr {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center; }
+    justify-content: flex-start;
+    align-items: center;
+    margin: 1rem 0; }
+    .list__head tr th {
+      width: 18.3vw; }
   .list__body tr {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 2rem 0; }
+    .list__body tr td {
+      text-align: center;
+      width: 18.3vw; }
+
+.row-in-edit {
+  position: relative; }
+  .row-in-edit .buttons-e-d {
+    position: absolute;
+    width: 60rem;
+    top: 45%;
+    left: 30%;
+    display: flex;
+    justify-items: center;
     align-items: center; }
+
+.buttons-e-d {
+  margin-top: 3.2rem; }
+  .buttons-e-d .cancel-button {
+    position: relative; }
+  .buttons-e-d .generate-button {
+    position: relative; }
+  .buttons-e-d .save-button {
+    position: relative;
+    border: solid 3px #23575a;
+    color: white;
+    padding: 0.7rem 1.2rem;
+    background-color: #23575a;
+    font-size: 1.6rem;
+    border-radius: 0.5rem; }
+    .buttons-e-d .save-button, .buttons-e-d .save-button:link, .buttons-e-d .save-button:visited {
+      text-transform: uppercase;
+      text-decoration: none;
+      display: inline-block;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s; }
+    .buttons-e-d .save-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }

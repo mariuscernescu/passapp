@@ -8,7 +8,7 @@
     font-weight: 500;
     margin-right: 1rem;
     cursor: pointer;
-    transition: all .2s;
+    transition: all 0.2s;
   }
 
   &--white {
@@ -33,7 +33,6 @@
     background-color: #23575a;
     font-size: 1.8rem;
     border-radius: 10rem;
-    
 
     &:hover {
       background-color: #164949;
@@ -77,7 +76,7 @@
     padding: 1.2rem 0;
     background-color: #23575a;
     font-size: 1.8rem;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     width: 21rem;
 
     &:hover {
@@ -86,12 +85,59 @@
     }
   }
 
+  &--reveal {
+    border: solid 3px #23575a;
+    color: white;
+    padding: .5rem;
+    background-color: #23575a;
+    font-size: 1.6rem;
+    border-radius: 0.5rem;
+    width: 18rem;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0.5rem 1rem rgba(#000, 0.2);
+    }
+  }
+
+  &--edit {
+      padding: 0.5rem 1.8rem;
+      font-weight: 400;
+      font-size: 1.6rem;
+      border: solid 3px #4c4c4c;
+      border-radius: 0.5rem;
+      background-color: #4c4c4c;
+      color: white;
+      cursor: pointer;
+      margin-right: 2rem;
   
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 0.5rem 1rem rgba(#000, 0.2);
+      }
+  }
+
+  &--delete {
+    padding: 0.5rem 1.8rem;
+    font-weight: 400;
+    font-size: 1.6rem;
+    border: solid 3px #c64d2e;
+    border-radius: 0.5rem;
+    background-color: #c64d2e;
+    color: white;
+    cursor: pointer;
+    margin-right: 2rem;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0.5rem 1rem rgba(#000, 0.2);
+    }
+}
 
   &:active,
-    &:focus {
-        outline: none;
-        transform: translateY(-1px);
-        box-shadow: 0 .3rem .6rem rgba(#000,.2);
-    }
+  &:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 0.3rem 0.6rem rgba(#000, 0.2);
+  }
 }

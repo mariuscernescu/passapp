@@ -81,6 +81,7 @@
         <th>Link</th>
         <th>Username</th>
         <th>Password</th>
+        <th>&nbsp;</th>
         <th class="is-hidden">Action</th>
         {% endif %}
       </tr>
@@ -98,24 +99,24 @@
         </td>
         <td class="username-td"><p>{{ i['username'] }}</p></td>
         <td class="password-td">
-          <button class="reveal-button" onclick="htmlActivate(this)">
+          <button class="reveal-button btn btn--reveal" onclick="htmlActivate(this)">
             REVEAL PASSWORD
             <p class="is-hidden">{{ i['hash'] }}</p>
           </button>
         </td>
         <td class="buttons-e-d">
-          <button class="edit-button" onclick="editOnClick(this)">EDIT</button
-          ><button class="delete-button" onclick="deleteOnClick(this)">
+          <button class="edit-button btn btn--edit" onclick="editOnClick(this)">EDIT</button
+          ><button class="delete-button btn btn--delete" onclick="deleteOnClick(this)">
             DELETE
           </button>
 
-          <button class="cancel-button is-hidden" onclick="cancelOnClick(this)">
+          <button class="cancel-button is-hidden btn btn--delete" onclick="cancelOnClick(this)">
             CANCEL
           </button>
           <button
             onclick="generatePassword2(this)"
             id="generator2"
-            class="generate-button is-hidden"
+            class="generate-button is-hidden entry__generate"
           >
             GENERATE NEW PASSWORD
           </button>
