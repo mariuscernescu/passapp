@@ -16,7 +16,8 @@
     padding-left: 2rem;
     outline: none;
     transition: all 0.2s;
-    margin: 2rem 0;
+    margin: 2rem 1.5rem 15rem 1.5rem;
+  
 
     &:focus {
       outline: none;
@@ -74,8 +75,7 @@
       box-shadow: 0 0.5rem 1rem rgba(#000, 0.2);
     }
 
-    &:active,
-    &:focus {
+    &:active {
       outline: none;
       transform: translateY(-1px);
       box-shadow: 0 0.3rem 0.6rem rgba(#000, 0.2);
