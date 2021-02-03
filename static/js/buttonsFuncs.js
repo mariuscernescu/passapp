@@ -4,7 +4,7 @@ function redAlert(msg) {
   let text = document.createTextNode(msg);
   p.appendChild(text);
   let div = document.createElement("div");
-  div.classList.add("error-bar");
+  div.classList.add("error");
   div.appendChild(p);
   body.appendChild(div);
 }

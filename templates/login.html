@@ -5,7 +5,7 @@
   {% if messages %}
     
     {% for message in messages %}
-    <div class="error-bar">
+    <div class="error">
       <p>{{ message }}</p>
     </div>
     {% endfor %}
@@ -13,7 +13,6 @@
   {% endif %}
 {% endwith %}
 
-{{ message }}
 
 <div class="login">
   <form action="/login" method="post">

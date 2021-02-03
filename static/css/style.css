@@ -9,7 +9,18 @@ html {
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
   font-size: 62.5%;
-  color: #4c4c4c; }
+  color: #4c4c4c;
+  position: relative; }
+
+@keyframes invizibility {
+  0% {
+    opacity: 0; }
+  10% {
+    opacity: 1; }
+  90% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
 
 .is-hidden {
   clip: rect(0 0 0 0);
@@ -250,7 +261,7 @@ html {
   padding-left: 2rem;
   outline: none;
   transition: all 0.2s;
-  margin: 2rem 1.5rem 15rem 1.5rem; }
+  margin: 2rem 1.5rem 8rem 1.5rem; }
   .entry__input:focus {
     outline: none;
     transform: scale(1.03); }
@@ -258,10 +269,10 @@ html {
 .entry__buttons {
   display: flex;
   justify-content: flex-end;
-  margin: 2.5rem 7.5rem; }
+  margin: -3rem 6.1rem 2.5rem; }
 
 .entry__submit {
-  padding: 0.6rem 2rem;
+  padding: 0.4rem 2rem;
   font-weight: 500;
   font-size: 1.8rem;
   border: solid 3px #23575a;
@@ -279,7 +290,7 @@ html {
     box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.2); }
 
 .entry__generate {
-  padding: 0.6rem 2rem;
+  padding: 0.4rem 2rem;
   font-weight: 400;
   font-size: 1.8rem;
   border: solid 3px #4c4c4c;
@@ -316,30 +327,38 @@ html {
 
 .pw_prompt input {
   margin-bottom: 1rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   border-style: hidden;
-  height: 2.5rem;
-  width: 26rem; }
+  height: 3rem;
+  width: 26rem;
+  outline: none; }
 
 .pw_prompt button {
   position: relative;
-  margin-bottom: 1rem;
+  margin: 1rem 1.5rem;
   border-style: hidden;
   border-radius: 5px;
-  padding: 0.3rem 0.5rem;
+  padding: 0.5rem 1rem;
   color: #4c4c4c;
   font-weight: 600;
-  font-size: 13px;
+  font-size: 1.5rem;
   background-color: white;
   cursor: pointer;
-  margin-top: 1.5rem; }
+  transition: all .2s; }
+  .pw_prompt button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+  .pw_prompt button:active, .pw_prompt button:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.2); }
 
 .list {
   width: 95vw;
   font-size: 2rem;
   margin: 5rem; }
   .list h1 {
-    margin: 0 0 2rem 4rem; }
+    margin: 0 0 4rem 4rem; }
   .list table {
     width: 96%; }
   .list__head tr {
@@ -350,6 +369,16 @@ html {
     margin: 1rem 0; }
     .list__head tr th {
       width: 18.3vw; }
+  .list__body a, .list__body a:link, .list__body a:visited {
+    text-decoration: none;
+    color: #4c4c4c;
+    display: inline-block;
+    transition: all .2s; }
+  .list__body a:hover {
+    transform: translateY(-3px);
+    color: #3d3d3d; }
+  .list__body a:active, .list__body a:focus {
+    transform: translateY(-1px); }
   .list__body tr {
     display: flex;
     flex-wrap: nowrap;
@@ -365,8 +394,8 @@ html {
   .row-in-edit .buttons-e-d {
     position: absolute;
     width: 60rem;
-    top: 45%;
-    left: 30%;
+    top: 47%;
+    left: 1%;
     display: flex;
     justify-items: center;
     align-items: center; }
@@ -381,9 +410,9 @@ html {
     position: relative;
     border: solid 3px #23575a;
     color: white;
-    padding: 0.7rem 1.2rem;
+    padding: 0.4rem 1.2rem;
     background-color: #23575a;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     border-radius: 0.5rem; }
     .buttons-e-d .save-button, .buttons-e-d .save-button:link, .buttons-e-d .save-button:visited {
       text-transform: uppercase;
@@ -395,3 +424,18 @@ html {
     .buttons-e-d .save-button:hover {
       transform: translateY(-3px);
       box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+.error {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 2.3rem;
+  background-color: #c64d2e;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 400;
+  text-align: center;
+  opacity: 0;
+  animation: invizibility 2.5s ease-out; }
+  .error p {
+    margin-top: 2px; }
