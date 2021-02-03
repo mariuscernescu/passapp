@@ -1,10 +1,27 @@
 .list {
   h1 {
     margin: 0 0 4rem 4rem;
+
+    @media only screen and (max-width: 62.5em) {
+      // 1000px
+      text-align: center;
+    }
   }
   width: 95vw;
   font-size: 2rem;
   margin: 5rem;
+
+  @media only screen and (max-width: 62.5em) {
+    // 1000px
+    margin: 0;
+  }
+
+  @media only screen and (max-width: 46.9em) {
+    // 750px
+    width: 100vw;
+    margin: 1rem;
+    font-size: 1.6rem;
+  }
   table {
     width: 96%;
 
@@ -20,13 +37,20 @@
 
       margin: 1rem 0;
 
+      @media only screen and (max-width: 62.5em) {
+        // 1000px
+
+        justify-content: center;
+      }
+
       th {
         width: 18.3vw;
 
-        // border: 1px solid black;
+        @media only screen and (max-width: 62.5em) {
+          // 1000px
+          width: 25%;
+        }
       }
-
-      // border: 1px solid black;
     }
   }
 
@@ -38,18 +62,25 @@
         text-decoration: none;
         color: #4c4c4c;
         display: inline-block;
-        transition: all .2s;
-      
+        transition: all 0.2s;
+
+        @media only screen and (max-width: 37.5em) {
+          // 600px
+          
+        font-size: 1.4rem;
+        margin-left: 1rem;
+        
+          
+        }
+        
       }
       &:hover {
         transform: translateY(-3px);
         color: #3d3d3d;
-        
       }
       &:active,
       &:focus {
         transform: translateY(-1px);
-        
       }
     }
 
@@ -61,12 +92,25 @@
 
       margin: 2rem 0;
 
-      // border: 1px solid black;
+      @media only screen and (max-width: 62.5em) {
+        // 1000px
+        position: relative;
+        margin-bottom: 8rem;
+        justify-content: center;
+      }
+
       td {
         text-align: center;
         width: 18.3vw;
         // border: 1px solid black;
+
+        @media only screen and (max-width: 62.5em) {
+          // 1000px
+          width: 100%;
+        }
       }
     }
   }
 }
+
+
