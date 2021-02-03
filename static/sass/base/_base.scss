@@ -22,4 +22,8 @@ html {
   font-size: 62.5%; // 1rem = 10px
   color: #4c4c4c;
   position: relative;
+
+  @media only screen and (max-width: 85em) { //1360 px
+    font-size: 50%;
+  }
 }

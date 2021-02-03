@@ -18,6 +18,10 @@
     font-size: 1.8rem;
     border-radius: 10rem;
 
+    @media only screen and (max-width: 68.75em) { // 1100px
+      margin-right: .5rem;
+    }
+
     &:hover {
       color: #23575a;
       border-color: #23575a;
@@ -93,6 +97,16 @@
     font-size: 1.6rem;
     border-radius: 0.5rem;
     width: 18rem;
+
+    @media only screen and (max-width: 37.5em) {
+      // 600px
+      padding: .2rem;
+    background-color: #23575a;
+    font-size: 1.3rem;
+    border-radius: 0.5rem;
+    width: 10rem;
+      
+    }
 
     &:hover {
       transform: translateY(-3px);
