@@ -1,36 +1,13 @@
+from flask import redirect, url_for, render_template, request, session, flash
+from passapp import app
 from cs50 import SQL
-from flask import Flask, redirect, url_for, render_template, request, session, flash
 from flask_session import Session
-from tempfile import mkdtemp
+
 from jinja2 import Template
-from helpers import apology, login_required
+from passapp.helpers import apology, login_required
 from werkzeug.exceptions import default_exceptions, HTTPException, InternalServerError
 from werkzeug.security import check_password_hash, generate_password_hash
 import json
-
-
-app = Flask(__name__)
-
-# Ensure templates are auto-reloaded
-app.config["TEMPLATES_AUTO_RELOAD"] = True
-
-# Ensure responses aren't cached
-
-
-@app.after_request
-def after_request(response):
-    response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
-    response.headers["Expires"] = 0
-    response.headers["Pragma"] = "no-cache"
-    return response
-
-
-# Configure session to use filesystem (instead of signed cookies)
-app.config["SESSION_FILE_DIR"] = mkdtemp()
-app.config["SESSION_PERMANENT"] = False
-app.config["SESSION_TYPE"] = "filesystem"
-Session(app)
-
 
 @app.route('/check', methods=["GET", "POST"])
 def check_user():
@@ -132,7 +109,8 @@ def edit():
 @app.route("/home", methods=["GET", "POST"])
 @login_required
 def index():
-
+    print("sunt in index")
+	
     db = SQL("sqlite:///passwordmanager.db")
     user_id = session["user_id"]
 
@@ -217,6 +195,3 @@ def errorhandler(e):
 # Listen for errors
 for code in default_exceptions:
     app.errorhandler(code)(errorhandler)
-
-if __name__ == "__main__":
-    app.run(debug=True)
