@@ -1,16 +1,23 @@
 **Pass App**
 
-PassApp is a simple password manager app I originally developed for my CS50 final project. The main goal of this app is to store all your passwords for every online service you use and help you generate more secure passwords in case you want to update them.
-
-**Project description**
-
-When you access the app, you will land on a welcome page where you need to choose either to create a new account or login with an existing one. When you signup as a new user, you need to provide a username and password. You will be notified if your username is already taken or if your password is not strong enough. 
-
-Once your account has been created, you will need need to log in. On the main page, you will see a button for adding new entries and a search bar for searching through all your entries (you will not have any yet as a new user). 
-
-When you add a new entry, you will need to fill in the following fields: website name, link, username, and password. During this step, you can choose to update your password by generating a new and more secure one, or you can just add your current password. After an entry is recorded in the app, you can edit it or delete it. Please note, that for security reasons, for any change you want to make - you will need to enter your PassApp password first. 
-
-All entries are automatically ordered alphabetically, but you can also easily find one by using the search function. 
+This is my final project for the CS50 course by Harvard University. I love
+the idea of a password manager that is well built and secure and I
+started to code one. I tried to write as much code as possible from
+scratch not knowing a lot about authentication or AES encryption. But
+with small steps and a steep learning curve, I managed to create
+something that is functional.</br></br>
+In the back end, I used Flask, and with some helper functions from
+CS50, I managed to tie together all the routes necessary to have a
+functional back end and database.</br></br>
+For the front end, I tried as much as possible to find ways to write pure
+CSS and JavaScript, not relying on any framework because I wanted to
+improve my skills. After learning BEM(Block Element Modifier) and
+SASS(Scss) I found myself in the position to create my own CSS
+framework.</br></br>
+Now you can easily create an account, log in and manage your
+passwords on my app. This of course not ready for production in any
+way but I am very happy about how much one person can achieve with
+a few months of studying.</br></br>
 
 **Tech stack**
 </br>
